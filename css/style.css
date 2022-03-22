@@ -224,3 +224,34 @@ nav {
     margin-left: 2em;
   }
 }
+
+/* About me section */
+.about-me {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-me__img {
+  box-shadow: var(--bs);
+}
+
+@media (min-width: 600px) {
+  .about-me {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    grid-template-areas: 
+      "title img"
+      "subtitle img"
+      "text img";
+    column-gap: 2em;
+  }
+
+  .section__title--about,
+  .section__subtitle--about {
+    grid-area: title;
+  }
+
+  .about-me__img {
+    grid-area: img;
+  }
+}
